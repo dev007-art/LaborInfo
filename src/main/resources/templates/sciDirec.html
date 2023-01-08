@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script  type="text/javascript" src="../static/js/jq.js"></script>
+    <link href="../static/layui/css/layui.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jq.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.mim.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            height: 800px;
+            border: 2px ;
+            margin: 0px auto 0px;
+        }
+        .headerImg{
+            width: 100%;
+        }
+        .header{
+            padding-bottom: 1px ;
+        }
+        .main{
+
+        }
+        #bar_left{
+            float: left;
+            height: 400px;
+            width: 20%;
+        }
+        #left{
+            height: 500px;
+        }
+        #bar_right{
+            float: left;
+            width: 80%;
+
+        }
+
+        .footerImg{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img class="headerImg" src="../static/img/header.png">
+    </div>
+    <!--导航-->
+    <div class="bar">
+        <ul class="layui-nav layui-bg-cyan">
+            <li class="layui-nav-item"><a href="index.html">首页</a></li>
+            <li class="layui-nav-item"><a href="laborIntro.html">实验室概况</a></li>
+            <li class="layui-nav-item"><a href="sciDirec.html">科研方向</a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="#">语义网和知识图谱</a>
+                        <a href="#">语言智能计算</a>
+                        <a href="#">人机协同智能</a>
+                        <a href="#">智能网络和大数据</a>
+                        <a href="#">工业网络/实时数据库</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="teacherInfo.html">科研队伍</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="teacherInfo1.html">语义网和知识图谱小组</a>
+                        <a href="teacherInfo2.html">语言智能计算实验室</a>
+                        <a href="teacherInfo3.html">人机协同智能小组</a>
+                        <a href="teacherInfo4.html">智能网络和大数据</a>
+                        <a href="teacherInfo5.html">工业网络/实时数据库小组</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">科研项目</a></li>
+            <li class="layui-nav-item"><a href="">科研成果</a></li>
+            <li class="layui-nav-item"><a href="">科研平台</a></li>
+            <li class="layui-nav-item"><a href="">开放交流</a></li>
+            <li class="layui-nav-item"><a href="">人才培养</a></li>
+            <li class="layui-nav-item"><a href="">实验室文化</a></li>
+            <li class="layui-nav-item"><a href="">资料下载</a></li>
+            <li class="layui-nav-item"><a href="">服务指南</a></li>
+        </ul>
+    </div>
+    <!--主体-->
+    <div class="main">
+        <div id="bar_left">
+            <ul id="left" class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">研究方向</a>
+                </li>
+            </ul>
+        </div>
+        <div id="bar_right">
+            <div style="color: black;font-size: 30px; border-bottom: 2px solid skyblue;">研究方向</div>
+            <ul>
+                <li style="margin-top: 30px;margin-bottom: 30px">
+                   机器学习
+                </li>
+                <li style="margin-top: 30px;margin-bottom: 30px">
+                    <div class="teacher_1_img">
+                        <img src="../static/img/teacher_1.png">
+                    </div>
+                    <div class="teacher_1_intro">
+                        <p>
+
+                        </p>
+                    </div>
+                </li>
+                <li style="margin-top: 30px;margin-bottom: 30px">
+                    <div>
+                        <img src="../static/img/teacher_1.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--尾部-->
+    <div class="footer">
+        <img class="footerImg" src="../static/img/footer.png">
+    </div>
+</div>
+</body>
+<script src="../static/layui/layui.js"></script>
+<script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //导航点击事件
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+</script>
+</html>
