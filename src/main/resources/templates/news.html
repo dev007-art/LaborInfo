@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>新闻页面</title>
+    <link rel="stylesheet" href="../static/css/news.css" type="text/css"/>
+    <script  type="text/javascript" src="../static/js/jq.js"></script>
+    <link href="../static/layui/css/layui.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jq.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.mim.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            height: 800px;
+            border: 2px ;
+            margin: 0px auto 0px;
+        }
+        .headerImg{
+            width: 100%;
+        }
+        .header{
+            padding-bottom: 1px ;
+        }
+        .main{
+
+        }
+        #bar_left{
+            float: left;
+            height: 400px;
+            width: 20%;
+        }
+        #left{
+            height: 500px;
+        }
+        #bar_right{
+            float: left;
+            width: 80%;
+
+        }
+
+        .footerImg{
+            width: 100%;
+        }
+    </style>
+
+
+
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img class="headerImg" src="../static/img/header.png">
+    </div>
+    <!--导航-->
+    <div class="bar">
+        <ul class="layui-nav layui-bg-cyan">
+            <li class="layui-nav-item"><a href="index.html">首页</a></li>
+            <li class="layui-nav-item"><a href="laborIntro.html">实验室概况</a></li>
+            <li class="layui-nav-item">
+                <a href="sciDirec.html">科研方向</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="#">机器学习</a></dd>
+                    <dd><a href="#">自然语言处理</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">科研队伍</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="#">WEB与智能计算研究团队</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">科研项目</a></li>
+            <li class="layui-nav-item"><a href="">科研成果</a></li>
+            <li class="layui-nav-item"><a href="">科研平台</a></li>
+            <li class="layui-nav-item"><a href="">开放交流</a></li>
+            <li class="layui-nav-item"><a href="">人才培养</a></li>
+            <li class="layui-nav-item"><a href="">实验室文化</a></li>
+            <li class="layui-nav-item"><a href="">资料下载</a></li>
+            <li class="layui-nav-item"><a href="">服务指南</a></li>
+        </ul>
+    </div>
+    <!--主体-->
+    <h2>高校IT骨干教师培训班将于7月在京举办（图）</h2>
+    <p class="one"><em class="blue">2014年4月15日11:08</em><em class="blue">传智播客网</em><em class="gray">我有话说（<em id="num">802</em>人参与）</em></p>
+    <hr/>
+    <p class ="two">2014年全国高校骨干IT教师暑期培训班将于7月在京举办</p>
+    <p>传智播客网4月15日消息 中国电子协会将携手csdn<em class="blue">[微博]</em>
+        和传智播客教育集团<em class="blue">[微博]</em>于2014年7月在京举办“2014年全国高校IT骨干老师培训班”。本次将于2014年7月14日到25日举办，课程涵盖：
+        JavaEE、.NET、PHP、网页平面设计、ios、C++六个方向。</p>
+    <p class="four">高校IT骨干教师培训班将于7月在京举办</p>
+    <p>传智播客<em class="blue">[微博]</em>还将为校企之间、校校之间提供交流分享专业建设与教学改革的理念、经验与成果的平台。</p>
+    <!--尾部-->
+    <div class="footer" style="bottom: 0">
+        <img class="div_foot" src="../static/img/footer.png" >
+    </div>
+</div>
+</body>
+<script src="../static/layui/layui.js"></script>
+<script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //导航点击事件
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+</script>
+</html>
+
+
+
